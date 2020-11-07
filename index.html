@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>RaspberryPi-4b-Server-Build-Flask</title>
+</head>
+<body>
+
+      <img src="https://wakatime.com/badge/github/SaadAhmedSalim/RaspberryPi-Server-Build-Flask.svg" alt="time tracker" />
+
+     <p> Before telling anything, I have tried Adafruit_DHT so many times and there is an error called 
+      <b>"ImportError: cannot import name ‘Beaglebone_Black_Driver’ from ‘Adafruit_DHT’" ,</b> this gave me much pain.. and after all I searched for the solution but still couldn't find any.<br>
+
+      But adafruit_dht module works fine..No complain!</p>
+
+      <h4>Instead of using those module, I've simply found dht11 module.</h4>
+
+      <p>Now, I am going to tell you what I used and why.</p>
+
+      <h2>Requirements:</h2>
+      <ul>
+      <li> Raspberry pi-4</li>      
+      <li> Intellij IDEA</li>      
+      <li> Python IDE</li>      
+      <li> Putty and VNC</li>
+    </ul>  
+
+      <h2>Documentation:</h2>
+
+  	<p>1. import RPi.GPIO as GPIO  #pip3 install RPi.GPIO<p>
+	<br>
+
+      <p>It is a standard interface that used to connect pi with sensor DHT11. In our cases, I connect pi 1(3.3V) to DHT11(VCC), 11(GPIO-17) to DHT11(Data) and 39 to DHT(GND).</p>
+	<br><br>
+
+    	<p>2. import dht11 #pip3 install dht11</p>
+	<br>
+
+      <p>I use its code for my project <a href="https://pypi.org/project/dht11/">LINK HERE</a>.</p>
+	<br><br>
+  
+    	<p>3. import time #pip3 install times</p>
+	<br>
+    
+      <p>I just need it for my infinite while loop that will continuously send me the temperature and humidity. But now I am not using it.</p>
+	<br><br>
+
+   	 <p>4. from flask import Flask #pip3 install Flask</p>
+   	<br>
+
+      <p>Basically, flask is a web application framework and interface that has libraries and tools to build something new. In my case, I've made a web server in Pi and with the flask interface I can see it in my laptop(I have another repository where I showed it before<a href="https://github.com/SaadAhmedSalim/Raspberry-Pi-4-Network-Connection-Issues-Fixed">Click here to see it.</a>)<p>
+	<br><br>
+
+    	<p>5. from flask_restful import Resource,Api #pip3 install Flask-RESTful</p>
+	<br>
+   
+      <p>I give you the link to read the documentation. It is so helpful. <a href="https://flask-restful.readthedocs.io/en/latest/">LINK HERE</a></p> 
+</body>
+</html>
